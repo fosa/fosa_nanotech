@@ -1,0 +1,127 @@
+% coding:utf-8
+
+%----------------------------------------
+%FOSAPHY, a LaTeX-Code for a summary of nanotechnology
+%Copyright (C) 2014, Mario Felder, Michael Fallegger
+
+%This program is free software; you can redistribute it and/or
+%modify it under the terms of the GNU General Public License
+%as published by the Free Software Foundation; either version 2
+%of the License, or (at your option) any later version.
+
+%This program is distributed in the hope that it will be useful,
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%GNU General Public License for more details.
+%----------------------------------------
+
+\chapter{Quantenphysik}
+
+\section{Wellenlänge eines Teilchens}
+\[\boxed{
+	\lambda = \frac{h}{p} = \frac{h}{m \cdot v}
+}\]
+\\
+\begin{footnotesize}
+	$h = 6.63 \cdot 10^{-34}Js$: Plancksches Wirkungsquantum 
+\end{footnotesize}
+\\
+
+\section{Licht als Teilchen}
+Photoenergie:
+\[\boxed{
+	E_{ph} = h \cdot f = \hbar \cdot \omega = \frac{h \cdot c}{\lambda}
+}\]
+\\
+Photompuls:
+\[\boxed{
+	p_{ph} = \hbar \cdot k = \frac{h \cdot f}{c} = \frac{h}{\lambda}
+}\]
+
+\section{Unschärferelation}
+\[\boxed{
+	\Delta x \cdot \Delta p_x \ge \hbar
+}\]
+\\
+Unschärfe für Zeit und Energie:
+\[\boxed{
+	\Delta E \cdot \Delta t \ge h
+}\]
+\\
+Unschärfe für Zeit und Frequenz:
+\[\boxed{
+	\Delta f \cdot \Delta t \ge 1 \qquad \Leftrightarrow \qquad \frac{c}{\lambda^2} \Delta \lambda \cdot \Delta t \ge 1
+}\]
+\\
+
+\section{Wellenfunktion}
+\[\boxed{
+	\rho(x,t) = \left| \psi(x,t) \right|^2 
+}\]
+\\
+Schrödingergleichung:
+\[\boxed{
+	\im h \pdifrac{}{t} \psi(x,t) = H \psi(x,t)
+}\]
+\[
+	H = \underbrace{- \frac{h^2}{2m} \cdot \pdifrac{^2}{x^2}}_{\text{kinetisch}} + \underbrace{V(x,t)}_{\text{potentiell}}
+\]
+\\
+mit:
+\[
+	\psi(x,t) = \e^{-\im \frac{E \cdot t}{h}} \cdot \varphi(x)
+\]
+folgt:
+\[
+	E \cdot \varphi(x) = - \frac{h^2}{2m} \cdot \pdifrac{^2 \varphi(x)}{x^2} + V(x) \cdot \varphi(x)
+\]
+\\
+Wahrscheinlichkeit dass ein Teilchen an einer bestimmten Position $x$ ist:
+\[\boxed{
+	\rho(x) = \left| \psi(x,t) \right|^2 = \left| \varphi(x) \right|^2
+}\]
+\[
+	\int \rho(x) \di x = 1
+\]
+\\
+\begin{footnotesize}
+	$\rho(x) \left[ \frac{1}{m} \right]$\\
+	$\varphi(x) \left[ \frac{1}{m^2} \right]$\\
+	$\psi(x) \left[ \frac{1}{m^2} \right]$
+\end{footnotesize}
+\\
+
+\section{Elektron in einem Potentialtopf}
+innerhalb $0 < x < L$:
+\[\boxed{
+	E \cdot \varphi(x) = - \frac{h^2}{2m} \cdot \pdifrac{^2 \varphi(x)}{x^2}
+}\]
+\\
+Lösungen der DGL:
+\[\boxed{
+	\varphi_n(x) = \sqrt{\frac{2}{L}} \sin(k_n \cdot x)
+}\]
+\[\boxed{
+	k_n = n \cdot \frac{\pi}{L}
+}\]
+\begin{footnotesize}
+	$n = 1,2,\dots$: Quantisierungszahl
+\end{footnotesize}
+\[\boxed{
+	E_n = \frac{h^2 k_n^2}{2m} \propto \frac{n^2}{L^2}
+}\]
+
+\subsection{Endlicher Potentialtopf}
+Eindringtiefe:
+\[\boxed{
+	d_n = \frac{h}{\sqrt{2m(U_0 - E_n)}}
+}\]
+
+\subsection{Tunnelbarriere}
+Transmissionswahrscheinlichkeit:
+\[\boxed{
+	T \approx \e^{-\frac{2L}{d}}
+}\]
+\[\boxed{
+	d = \frac{h}{\sqrt{2m(U_0-E)}}
+}\]
