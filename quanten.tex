@@ -18,12 +18,13 @@
 \chapter{Quantenphysik}
 
 \section{Wellenlänge eines Teilchens}
+De Broglie Wellenlänge:
 \[\boxed{
 	\lambda = \frac{h}{p} = \frac{h}{m \cdot v}
 }\]
 \\
 \begin{footnotesize}
-	$h = 6.63 \cdot 10^{-34}Js$: Plancksches Wirkungsquantum 
+	$h$: Plancksches Wirkungsquantum ($h = 6.63 \cdot 10^{-34}Js$)
 \end{footnotesize}
 \\
 
@@ -38,20 +39,32 @@ Photompuls:
 	p_{ph} = \hbar \cdot k = \frac{h \cdot f}{c} = \frac{h}{\lambda}
 }\]
 
-\section{Unschärferelation}
-\[\boxed{
-	\Delta x \cdot \Delta p_x \ge \hbar
-}\]
+\subsection{Heisenberg'sche Ort/Impuls}
+Die Elementarteilchen kommen nicht gerade aus einem Spalt, sondern streuen mehr oder weniger zur Seite. Der Streuwinkel $\Theta$ ist abhängig von Spaltbreite und die Wellenlänge.\\
+\[
+	\Theta \sim \frac{\lambda}{a}
+\]
 \\
-Unschärfe für Zeit und Energie:
-\[\boxed{
-	\Delta E \cdot \Delta t \ge h
-}\]
+Das bedeutet, dass die Geschwindigkeitsrichtung und der Impuls auch streuen:
+\[
+	\Delta p = \tan(\Theta)\cdot p\sim \Theta \cdot \frac{h}{\lambda}=\frac{h}{a}
+\]
+Heisenberg'sche Unschärferelation für Impuls und Position:
+\[
+	\Delta x \cdot \Delta p_x \geq \hbar
+\]
+\subsection{Unschärfe für Zeit, Energie und Frequenz}
+Die Energie eines Zustands, der nur eine kurze Zeit $\Delta t$ existiert, ist nur innerhalb einer Unsicherheit von $\Delta E$ bestimmt.\\
+\[
+	\Delta E \cdot \Delta t \geq h
+\]
 \\
-Unschärfe für Zeit und Frequenz:
-\[\boxed{
-	\Delta f \cdot \Delta t \ge 1 \qquad \Leftrightarrow \qquad \frac{c}{\lambda^2} \Delta \lambda \cdot \Delta t \ge 1
-}\]
+Die spektrale Breite (Bandbreite) eines Wellenpakets hat einen unteren Grenzwert, der gegeben ist durch die zeitliche Dauer $\Delta t$ des Pakets.
+\[
+	\Delta f \cdot \Delta t \geq 1 
+	\qquad \Leftrightarrow \qquad
+	\frac{c}{\lambda^2}\Delta \lambda \cdot \Delta t \geq 1
+\]
 \\
 
 \section{Wellenfunktion}
@@ -60,9 +73,9 @@ Unschärfe für Zeit und Frequenz:
 }\]
 \\
 Schrödingergleichung:
-\[\boxed{
+\[
 	\im h \pdifrac{}{t} \psi(x,t) = H \psi(x,t)
-}\]
+\]
 \[
 	H = \underbrace{- \frac{h^2}{2m} \cdot \pdifrac{^2}{x^2}}_{\text{kinetisch}} + \underbrace{V(x,t)}_{\text{potentiell}}
 \]
@@ -97,27 +110,32 @@ innerhalb $0 < x < L$:
 	E \cdot \varphi(x) = - \frac{h^2}{2m} \cdot \pdifrac{^2 \varphi(x)}{x^2}
 }\]
 \\
-Lösungen der DGL:
-\[\boxed{
+Quantisierte Lösung:
+\[
 	\varphi_n(x) = \sqrt{\frac{2}{L}} \sin(k_n \cdot x)
-}\]
-\[\boxed{
+\]
+\[
 	k_n = n \cdot \frac{\pi}{L}
-}\]
-\begin{footnotesize}
-	$n = 1,2,\dots$: Quantisierungszahl
-\end{footnotesize}
-\[\boxed{
+\]
+\[
 	E_n = \frac{h^2 k_n^2}{2m} \propto \frac{n^2}{L^2}
-}\]
+\]
+\\
+\begin{footnotesize}
+	$L$: Spaltenbreite\\
+	$n$: Quantisierungszahl ($ = 1,2,\dots$)
+\end{footnotesize}
+\\
 
 \subsection{Endlicher Potentialtopf}
-Eindringtiefe:
+Die $\frac{1}{e}$ Eindringtiefe $d_n$ der Wellenfunktion ist:\\
 \[\boxed{
 	d_n = \frac{h}{\sqrt{2m(U_0 - E_n)}}
 }\]
 
-\subsection{Tunnelbarriere}
+\section{Tunnelbarriere}
+In der Quantenmechanik gibt es eine endliche Wahrscheinlichkeit ein Hindernis zu überwinden, auch wenn man nicht darüber springt. Diesen Prozess nennt man \textit{tunneln}.\\
+\\
 Transmissionswahrscheinlichkeit:
 \[\boxed{
 	T \approx \e^{-\frac{2L}{d}}
